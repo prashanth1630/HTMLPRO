@@ -1,0 +1,111 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function validateform(){
+        var firstname=document.myform.getElementById("fname");
+        var password=document.myform.getElementById("pass");
+        if (firstname.value==null || firstname.value==""){  
+               alert("Name can't be blank");  
+               return false;  
+        }else if(password.value.length<6){  
+              alert("Password must be at least 6 characters long.");  
+              return false;  
+            }
+            else{
+                return true;
+            }       
+        } 
+    </script>
+<style>
+#main{
+    height: 500px;
+    display:flex;
+     margin-top:120px;
+     margin-left:300px;
+}
+#box1{
+ background-color:blue;
+    width: 10%;
+    height: 95%;
+}
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: white;
+  padding-left:5px;
+  padding-top:10px;
+  padding-right:30px;
+}
+
+#box2{
+background-color:white;
+    width: 20%;
+    height: 81%;
+    padding-left:25px;
+    padding-top:60px;
+    padding-right:20px;
+    padding-bottom:10px;
+}
+h1{
+padding-left:10px;
+text-align:vertical;
+}
+p{
+padding-left:5px;
+}
+body{
+background-color:rgb(183, 183, 204);
+}
+select{
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: white; 
+  padding-right:120px; 
+}
+h3{
+    padding-top: 3px;
+    margin-top: -5px;
+}
+</style>
+</head>
+<body>
+<div id="main">
+<div id="box1">
+<h1>SignUp</h1>
+</div>
+<div id="box2">
+<h3>New User</h3>
+<p>Use the form below to create account</p>
+<form name="myform" onsubmit="return validateform()" method="POST">
+<input type="text" id="fname" placeholder="First Name"><br><br>
+<label>Nationality</label><br>
+<select name="Nationality">
+ <option value="India">India</option>
+    <option value="America">America</option>
+    <option value="Austrilan">Austrilan</option>
+</select><br><br>
+<label>Date of Birth</label><br>
+<input type ="date" placeholder="Date of Birth"><br><br>
+<input type="text" id="moblie" placeholder="Moblie Number"><br><br>
+<input type="text" id="pass" placeholder="Password"><br>
+<p>Have an account?<a href="mockassign.html">Login</a></p>
+</div>
+<div id="box2">
+<br><br><br><br><br>
+<input type="text" id="lname" placeholder="Last Name"><br><br>
+<input type="Email" id="email" placeholder="Email"><br><br><br>
+<label>Gender</label><br>
+<label><input type="radio" name="name">Male</label>
+<label><input type="radio" name="name">Female</label><br><br>
+<input type="text" id="otp" placeholder="OTP"><br><br>
+<input type="text" id="cpassword" placeholder="Confirm Password"><br><br>
+<input type="submit" style="color:blue;" value="Confirm Signup">
+</form>
+</div>
+</div>
+</body>
+</html>
